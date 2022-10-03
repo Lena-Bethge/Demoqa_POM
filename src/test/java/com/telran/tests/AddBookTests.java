@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 public class AddBookTests extends TestBase{
 
-    public class AddBookTest extends TestBase{
 
         @BeforeMethod
         public void ensurePrecondition() {
@@ -26,5 +25,4 @@ public class AddBookTests extends TestBase{
             new BookStorePage(driver).typeInSearchBookInput(BookData.BOOK_NAME);
             Assert.assertTrue(new BookStorePage(driver).takeNameOfBook().contains(BookData.BOOK_NAME));
         }
-    }
 }
