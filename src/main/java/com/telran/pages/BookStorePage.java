@@ -34,4 +34,20 @@ public class BookStorePage extends BasePage{
         return nameOfBook.getText();
 
     }
+
+    public BookStorePage clickOnBookTitleLink() {
+        click(nameOfBook);
+        return this;
+    }
+
+    @FindBy(css = ".text-right.fullButton")
+    WebElement addToCollectionButton;
+
+    public BookStorePage clickOnAddBookButton() {
+        clickWithJSExecutor(addToCollectionButton, 0,300);
+        pause(500);
+        return this;
+    }
+
+
 }
