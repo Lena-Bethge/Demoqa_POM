@@ -1,15 +1,16 @@
 package com.telran.pages;
 
-import org.openqa.selenium.JavascriptException;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.google.common.io.Files;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.File;
+import java.io.IOException;
+
 public class BasePage {
 
-    WebDriver driver;
+    public WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -59,6 +60,17 @@ public class BasePage {
             e.printStackTrace();
         }
 
+    }
+
+    public String takeScreenshots() {
+        File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File screenshot = new File("screenshots/screen" + System.currentTimeMillis() + ".png");
+        try {
+            Files.copy(tmp,screenshot);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return screenshot.getAbsolutePath();
     }
 
 }

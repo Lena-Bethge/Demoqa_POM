@@ -1,5 +1,6 @@
 package com.telran.tests;
 
+import com.telran.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
@@ -11,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
-    WebDriver driver;
+    public WebDriver driver;
     Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeMethod
@@ -37,6 +38,7 @@ public class TestBase {
     @AfterMethod
     public void stopTest() {
         logger.info("Test stop");
+        new BasePage(driver).takeScreenshots();
     }
 
 }
