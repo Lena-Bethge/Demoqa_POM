@@ -72,5 +72,36 @@ public class BasePage {
         }
         return screenshot.getAbsolutePath();
     }
+    //скрыть рекламу
+    public void hideAd() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript("document.getElementById('adplus-anchor').style.display='none'");
+    }
+    //скрыть футер
+    public void hideFooter() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript("document.querySelector('footer').style.display='none'");
+
+
+    }
+
+    public void closeBanner() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.getElementById('close-fixedban').style.display='none'");
+    }
+
+    public void clickWithRectangle(WebElement element,int i,int j) {
+
+        Rectangle rectangle = element.getRect();
+
+        int offSetX = rectangle.getWidth()/i;
+        int offSetY = rectangle.getHeight()/j;
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        actions.moveByOffset(-offSetX,-offSetY).click().perform();
+    }
 
 }
