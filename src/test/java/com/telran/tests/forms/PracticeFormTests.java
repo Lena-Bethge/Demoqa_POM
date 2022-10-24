@@ -5,6 +5,7 @@ import com.telran.pages.HomePage;
 import com.telran.pages.SidePanelPage;
 import com.telran.pages.forms.PracticeFormPage;
 import com.telran.tests.TestBase;
+import com.telran.utils.DataProviders;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 
@@ -24,7 +25,7 @@ public class PracticeFormTests extends TestBase {
         new SidePanelPage(driver).selectPracticeForm();
     }
 
-   @DataProvider
+  /* @DataProvider
     public Iterator<Object[]> addNewStudent() {
         List<Object[]> list = new ArrayList<>();
         list.add(new Object[]{"Jack","Joy","joy@dmail.com","Male","9876543210","1 May 1987","Leipzig","NCR","Delhi"});
@@ -32,12 +33,14 @@ public class PracticeFormTests extends TestBase {
         list.add(new Object[]{"Jack","Joy","joy+2@dmail.com","Male","9988776655","1 Juli 1999","Leipzig","NCR","Delhi"});
 
         return list.iterator();
-    }
+    }*/
 
-    @Test(dataProvider = "addNewStudent")
-    public void createNewStudent() {
-        new PracticeFormPage(driver).hideIframes().enterPersonalData(StudentData.FIRST_NAME,StudentData.LAST_NAME,StudentData.EMAIL,
-                StudentData.TEL_NUM,StudentData.ADDRESS);
+    @Test()
+    public void createNewStudentTest() {
+        new PracticeFormPage(driver)
+                .hideIframes()
+                .enterPersonalData(StudentData.FIRST_NAME,StudentData.LAST_NAME,StudentData.EMAIL,
+                StudentData.TEL_NUM);
 
         new PracticeFormPage(driver).selectGender(StudentData.GENDER)
 
@@ -46,6 +49,28 @@ public class PracticeFormTests extends TestBase {
                 .addSubject(StudentData.SUBJECTS)
                 .chooseHobby(StudentData.HOBBIES)
                 .uploadFile(StudentData.PHOTO_PATH)
+                .addAddress(StudentData.ADDRESS)
+                .enterState(StudentData.STATE)
+                .enterCity(StudentData.CITY).submit();
+        Assert.assertTrue(new PracticeFormPage(driver).getModelTittle().contains("Thanks for submitting the form"));
+        new PracticeFormPage(driver).closeModalDialog();
+    }
+
+    @Test(dataProviderClass = DataProviders.class,dataProvider = "usingFile")
+    public void createNewStudentWithDataProviderTest(String firstName, String lastName,String email,String phone,
+                                                     String birthDate, String file, String address) {
+        new PracticeFormPage(driver)
+                .hideIframes()
+                .enterPersonalData(firstName,lastName,email,phone);
+
+        new PracticeFormPage(driver).selectGender(StudentData.GENDER)
+
+               // .chooseDate("May","1987", "1")
+                .typeOfDate(birthDate)
+                .addSubject(StudentData.SUBJECTS)
+                .chooseHobby(StudentData.HOBBIES)
+                .uploadFile(file)
+                .addAddress(address)
                 .enterState(StudentData.STATE)
                 .enterCity(StudentData.CITY).submit();
         Assert.assertTrue(new PracticeFormPage(driver).getModelTittle().contains("Thanks for submitting the form"));
