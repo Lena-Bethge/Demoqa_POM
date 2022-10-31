@@ -30,4 +30,10 @@ public class TextBoxTest extends TestBase {
         Assert.assertTrue(new TextBoxPage(driver).getOutputAssert().contains("Name"));
 
     }
+
+    @Test
+    public void keyBoardEventTest() {
+        new TextBoxPage(driver).keyBoardEvent();
+        Assert.assertEquals(new TextBoxPage(driver).getAttribute(),"Bahnhofstr.20, 10234 Leipzig");
+    }
 }

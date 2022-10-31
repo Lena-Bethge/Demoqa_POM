@@ -62,16 +62,17 @@ public class BasePage {
 
     }
 
-    public String takeScreenshots() {
+    public void takeScreenshots() {
         File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File screenshot = new File("screenshots/screen" + System.currentTimeMillis() + ".png");
+        File screenshot = new File(" screenshots/screen" + System.currentTimeMillis() + ".png");
         try {
             Files.copy(tmp,screenshot);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return screenshot.getAbsolutePath();
+        screenshot.getAbsolutePath();
     }
+
     //скрыть рекламу
     public void hideAd() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -102,6 +103,16 @@ public class BasePage {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
         actions.moveByOffset(-offSetX,-offSetY).click().perform();
+    }
+
+    public void takeScreenshotListener(String pathToFile) {
+        File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File screenshot = new File(pathToFile);
+        try {
+            Files.copy(tmp,screenshot);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
