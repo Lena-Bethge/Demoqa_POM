@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SmokyTest" verbose="1" >
+    <test name="AddBook" >
+        <classes>
+            <class name="com.telran.tests.bookStore.AddBookTests" />
+        </classes>
+    </test>
+
+
+</suite>

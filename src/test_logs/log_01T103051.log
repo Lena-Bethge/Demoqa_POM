@@ -1,0 +1,52 @@
+10649 [main] INFO  com.telran.tests.TestBase - Test start. Method loginPositiveParametersTest
+10780 [main] INFO  com.telran.tests.utils.MyListener - Start search By.xpath: //*[text()='Book Store Application']
+10969 [main] INFO  com.telran.tests.utils.MyListener - By.xpath: //*[text()='Book Store Application'] was found.
+11341 [main] INFO  com.telran.tests.utils.MyListener - Start search By.id: login
+11568 [main] INFO  com.telran.tests.utils.MyListener - By.id: login was found.
+12255 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='UserName']
+12695 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='UserName'] was found.
+12989 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='UserName']
+13041 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='UserName'] was found.
+13143 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='UserName']
+13187 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='UserName'] was found.
+13336 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='Password']
+13445 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='Password'] was found.
+13692 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='Password']
+13760 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='Password'] was found.
+13956 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='Password']
+13994 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='Password'] was found.
+14265 [main] INFO  com.telran.tests.utils.MyListener - Start search By.id: login
+14296 [main] INFO  com.telran.tests.utils.MyListener - By.id: login was found.
+14471 [main] INFO  com.telran.tests.utils.MyListener - Start search By.id: userName-value
+14900 [main] INFO  com.telran.tests.utils.MyListener - By.id: userName-value was found.
+14967 [main] INFO  com.telran.tests.utils.MyListener - Start search By.id: userName-value
+14990 [main] INFO  com.telran.tests.utils.MyListener - By.id: userName-value was found.
+15022 [main] INFO  com.telran.tests.utils.MyListener - Start search By.xpath: //*[contains(text(),'Log out')]
+15084 [main] INFO  com.telran.tests.utils.MyListener - By.xpath: //*[contains(text(),'Log out')] was found.
+15243 [main] INFO  com.telran.tests.TestBase - PASSED: test method loginPositiveParametersTest
+24416 [main] INFO  com.telran.tests.TestBase - Test start. Method loginPositiveTest
+24448 [main] INFO  com.telran.tests.utils.MyListener - Start search By.xpath: //*[text()='Book Store Application']
+24495 [main] INFO  com.telran.tests.utils.MyListener - By.xpath: //*[text()='Book Store Application'] was found.
+24878 [main] INFO  com.telran.tests.utils.MyListener - Start search By.id: login
+27509 [main] INFO  com.telran.tests.utils.MyListener - By.id: login was found.
+27839 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='UserName']
+27884 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='UserName'] was found.
+28105 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='UserName']
+28156 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='UserName'] was found.
+28260 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='UserName']
+28287 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='UserName'] was found.
+28400 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='Password']
+28436 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='Password'] was found.
+28585 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='Password']
+28656 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='Password'] was found.
+28769 [main] INFO  com.telran.tests.utils.MyListener - Start search By.cssSelector: [placeholder='Password']
+28802 [main] INFO  com.telran.tests.utils.MyListener - By.cssSelector: [placeholder='Password'] was found.
+28988 [main] INFO  com.telran.tests.utils.MyListener - Start search By.id: login
+29026 [main] INFO  com.telran.tests.utils.MyListener - By.id: login was found.
+29142 [main] INFO  com.telran.tests.utils.MyListener - Start search By.id: userName-value
+29927 [main] INFO  com.telran.tests.utils.MyListener - By.id: userName-value was found.
+29982 [main] INFO  com.telran.tests.utils.MyListener - Start search By.id: userName-value
+30044 [main] INFO  com.telran.tests.utils.MyListener - By.id: userName-value was found.
+30080 [main] INFO  com.telran.tests.utils.MyListener - Start search By.xpath: //*[contains(text(),'Log out')]
+30161 [main] INFO  com.telran.tests.utils.MyListener - By.xpath: //*[contains(text(),'Log out')] was found.
+30363 [main] INFO  com.telran.tests.TestBase - PASSED: test method loginPositiveTest
