@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SearchBook" verbose="1" >
+    <test name="SearchBook" >
+        <classes>
+            <class name="com.telran.tests.bookStore.SearchBookTests">
+                <parameter name="BOOK_NAME" value="Git"/>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>
